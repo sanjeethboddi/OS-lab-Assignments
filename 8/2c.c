@@ -9,14 +9,13 @@
 int main(int argc, char* argv[]){
 
     if(argc!=2){
-        printf("enter file name you want to read/write/create as command line argument\n");
+        printf("enter file name to which you want to append as command line argument\n");
         exit(0);
     }
     int fd,count=0,t,buf_size=100,j;
     char buf[buf_size],ch;
-	
-    fd=open(argv[1],O_RDWR|O_CREAT|O_TRUNC,00700);
-    if(fd ==-1){
+    fd=open(argv[1],O_RDWR|O_APPEND|O_CREAT,00700);
+     if(fd ==-1){
         printf("Unable to open file\n exiting...\n");
         exit(0);
     }
