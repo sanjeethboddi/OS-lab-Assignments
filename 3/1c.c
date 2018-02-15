@@ -4,10 +4,7 @@
 #include<unistd.h>
 void main(int argc, char * argv[]){
   int i,e;
-  if(argc<3){
-    exit(0);
-  }
-  else{
+  {
     i=fork();
     if(i==-1){
       printf("Process creation unsuccessfull\n");
