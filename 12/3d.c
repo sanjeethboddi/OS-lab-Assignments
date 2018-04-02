@@ -10,8 +10,6 @@ void main(int argc,char * argv[]){
 	}
 	
 	int fd,ret;
-	
-	
 	ret=unlink(argv[1]);
 	if(ret< 0){
 	printf("error\n");
